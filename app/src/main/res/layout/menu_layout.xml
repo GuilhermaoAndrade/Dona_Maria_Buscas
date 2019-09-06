@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    tools:context=".MenuActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b3ecff"
+        >
 
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:itemTextColor="#000"
+        app:itemIconTint="#000"
+        app:menu="@menu/drawermenu"
+        android:layout_gravity="start"
+        >
+
+
+
+
+
+    </android.support.design.widget.NavigationView>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <com.synnapps.carouselview.CarouselView
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -15,14 +47,9 @@
         app:slideInterval="2000"
         app:strokeColor="#fff"
         app:strokeWidth="1dp"
-        android:id="@+id/carousel"
-
-        >
-
-
-    </com.synnapps.carouselview.CarouselView>
-
-
-
-
+        android:id="@+id/carousel"/>
 </RelativeLayout>
+
+
+
+</android.support.v4.widget.DrawerLayout>

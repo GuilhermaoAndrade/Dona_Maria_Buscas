@@ -48,6 +48,19 @@
         app:strokeColor="#fff"
         app:strokeWidth="1dp"
         android:id="@+id/carousel"/>
+
+    <GridView
+        android:layout_below="@id/carousel"
+        android:id="@+id/gridview"
+        android:numColumns="2"
+        android:verticalSpacing="1dp"
+        android:background="#e5e5e5"
+        android:horizontalSpacing="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></GridView>
+
+
+
 </RelativeLayout>
 
 

@@ -1,11 +1,18 @@
 package br.com.etecia.dona_maria_buscas;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.synnapps.carouselview.CarouselView;
@@ -13,6 +20,15 @@ import com.synnapps.carouselview.ImageClickListener;
 import com.synnapps.carouselview.ImageListener;
 
 public class MenuActivity extends AppCompatActivity {
+
+
+    GridView gridView;
+
+    String[] namePlanets = {"Alimentos Basico", "Verdura", "Bebida Alcoolica", "Fruta", "Peixe", "Leite"};
+    int[] imagePlanets = {R.drawable.alimentosbasico, R.drawable.verdura, R.drawable.bebidaalcolica,
+            R.drawable.fruta, R.drawable.peixe, R.drawable.leite,
+           };
+
 
     private DrawerLayout nDrawerLayout;
     private ActionBarDrawerToggle aToggle;
@@ -61,7 +77,55 @@ public class MenuActivity extends AppCompatActivity {
         });
 
 
+        gridView = (GridView) findViewById(R.id.gridView);
+
+        CustomAdapter customAdaper = new CustomAdapter();
+        gridView.setAdapter(customAdaper);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), GridItemActivity.class);
+                intent.putExtra("name", namePlanets[position]);
+                intent.putExtra("image", imagePlanets[position]);
+                startActivity(intent);
+            }
+        });
     }
+
+    public class CustomAdapter extends BaseAdapter {
+
+        @Override
+        public int getCount() {
+            return imagePlanets.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            View view1 = getLayoutInflater().inflate(R.layout.row_data, null);
+
+            TextView name = view1.findViewById(R.id.txtPlanetas);
+            ImageView image = view1.findViewById(R.id.images);
+
+            name.setText(namePlanets[position]);
+            image.setImageResource(imagePlanets[position]);
+
+            return view1;
+        }
+    }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

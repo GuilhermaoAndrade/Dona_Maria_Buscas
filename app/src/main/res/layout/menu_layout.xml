@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#b3ecff"
+        android:background="#ffffff"
         >
 
 
@@ -30,14 +30,13 @@
 
 
 
-
-
     </android.support.design.widget.NavigationView>
 
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
     <com.synnapps.carouselview.CarouselView
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -50,15 +49,17 @@
         android:id="@+id/carousel"/>
 
     <GridView
+        android:layout_margin="15dp"
         android:layout_below="@id/carousel"
-        android:id="@+id/gridview"
-        android:numColumns="2"
-        android:verticalSpacing="1dp"
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#e5e5e5"
         android:horizontalSpacing="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></GridView>
+        android:numColumns="2"
+        android:verticalSpacing="1dp">
 
+    </GridView>
 
 
 </RelativeLayout>

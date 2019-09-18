@@ -84,20 +84,25 @@
             android:layout_height="40dp"
             android:src="@drawable/estado"
             />
-        <EditText
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/spinnerUF"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/txt_cadastro"
-            android:hint="  Estado"
+            android:hint="    UF "
             android:layout_marginRight="20dp"
-            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/telefone"
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/txt_cadastro"
-            android:hint=" Número"
+            android:hint="  Número"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
 
@@ -124,16 +129,48 @@
             android:hint="   Email"
             android:layout_marginRight="20dp"
             />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/senha"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/txt_cadastro"
+            android:hint="   Senha"
+            android:layout_marginRight="20dp"
+            />
+
+
+
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Cadastrar"
+        android:textColor="#ffff"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:background="@drawable/txt_cadastro"
+        android:background="@drawable/botao"
         android:layout_margin="15dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="18dp"
+
         />
 
 

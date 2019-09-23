@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class CadastroActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class CadastroActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
 
@@ -21,12 +21,20 @@ public class CadastroActivity extends AppCompatActivity implements AdapterView.O
                 R.array.lista_uf, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        spinner.setOnItemClickListener(this);
+        spinner.setOnItemSelectedListener(this);
+    }
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+        String text = parent.getItemAtPosition(position).toString();
+        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_LONG).show();
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
+

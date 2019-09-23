@@ -6,14 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Login_Activity"
-    android:background="#c47a7a"
+    android:background="#ffff"
     >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logotipo"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="10dp"
         >
 
         <EditText
@@ -21,7 +29,7 @@
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/borda"
+            android:background="@drawable/txt_cadastro"
             android:drawableRight="@drawable/login_black"
             android:hint="Usuário:"
             android:inputType="textPersonName"
@@ -34,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@color/borda"
+            android:background="@drawable/txt_cadastro"
             android:drawableRight="@drawable/lock_black"
             android:hint="Senha:"
             android:inputType="textPassword"
@@ -48,32 +56,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btnEntrar"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/btn_login"
                 android:onClick="entrarApp"
                 android:text="@string/entrar"
                 android:textColor="@color/fonte"
-
                 />
-
             <Button
-                android:id="@+id/btnSair"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnCadastrar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:onClick="sairApp"
-                android:text="@string/sair"
+                android:background="@drawable/btn_login"
+                android:text="Cadastrar"
                 android:textColor="@color/fonte" />
+
         </LinearLayout>
+
 
 
     </LinearLayout>

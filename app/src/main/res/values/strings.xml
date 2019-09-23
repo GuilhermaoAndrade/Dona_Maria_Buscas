@@ -6,8 +6,18 @@
     <string name="close">Close</string>
 
 
+    <string-array name="categoria">
+        <item></item>
+        <item>Alimentos Basico</item>
+        <item>Verdura</item>
+        <item>Bebida Alcoolica</item>
+        <item>Fruta</item>
+        <item>Peixe</item>
+        <item>Leite</item>
+</string-array>
 
     <string-array name="lista_uf">
+        <item></item>
         <item>AC</item>
         <item>AL</item>
         <item>AM</item>

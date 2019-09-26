@@ -16,11 +16,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        mavenCentral()
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.what3words:w3w-android-wrapper:3.1.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.synnapps:carouselview:0.1.5'
     implementation 'com.android.support:cardview-v7'

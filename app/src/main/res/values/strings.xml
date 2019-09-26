@@ -14,7 +14,7 @@
         <item>Fruta</item>
         <item>Peixe</item>
         <item>Leite</item>
-</string-array>
+    </string-array>
 
     <string-array name="lista_uf">
         <item></item>

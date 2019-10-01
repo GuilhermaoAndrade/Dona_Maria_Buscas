@@ -1,11 +1,12 @@
 package br.com.etecia.dona_maria_buscas;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GridItemActivity extends AppCompatActivity {
     TextView gridData;

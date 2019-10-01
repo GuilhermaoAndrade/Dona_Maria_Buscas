@@ -8,6 +8,17 @@
     android:orientation="vertical"
     >
 
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,18 +28,33 @@
 
         <ImageView
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:src="@drawable/person"
             />
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/txt_cadastro"
-            android:hint="   Nome"
-            android:layout_marginRight="20dp"
-            android:inputType="textPersonName"
-            />
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:passwordToggleEnabled="true"
+            >
+            <EditText
+                android:id="@+id/txtNome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/txt_cadastro"
+                android:hint="   Nome"
+                android:layout_marginRight="20dp"
+                android:inputType="textPersonName"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
+
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,79 +63,31 @@
         android:layout_marginTop="20dp"
         >
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:src="@drawable/location"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/txt_cadastro"
-            android:hint="  Endereço"
-            android:layout_marginRight="20dp"
-            android:inputType="textPostalAddress"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        >
 
         <ImageView
             android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:src="@drawable/location_city"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/txt_cadastro"
-            android:hint="  Cidade"
-            android:layout_marginRight="20dp"
-            android:inputType="textPersonName"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        >
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:src="@drawable/estado"
-            />
-        <Spinner
-            android:id="@+id/spinnerUF"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/txt_cadastro"
-            android:hint="    UF "
-            android:layout_marginRight="20dp"
-            />
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:src="@drawable/telefone"
             />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/txt_cadastro"
-            android:hint="  Número"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:inputType="phone"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:passwordToggleEnabled="true"
+            >
+            <EditText
+                android:id="@+id/txtNumero"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/txt_cadastro"
+                android:hint="  Número"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
 
-            />
+                />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
 
@@ -122,20 +100,30 @@
 
         <ImageView
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:src="@drawable/email"
             />
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/txt_cadastro"
-            android:hint="   Email"
-            android:layout_marginRight="20dp"
-            android:inputType="textEmailAddress"
-            />
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:passwordToggleEnabled="true"
+            >
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/txt_cadastro"
+                android:hint="   Email"
+                android:layout_marginRight="20dp"
+                android:inputType="textEmailAddress"
+
+                />
 
 
-
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -147,23 +135,110 @@
 
         <ImageView
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:src="@drawable/senha"
             />
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/txt_cadastro"
-            android:hint="   Senha"
-            android:layout_marginRight="20dp"
-            android:inputType="textPassword"
-            />
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:passwordToggleEnabled="true"
+            >
+            <EditText
+                android:id="@+id/txtSenha"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/txt_cadastro"
+                android:hint="   Senha"
+                android:layout_marginRight="20dp"
+                android:inputType="textPassword"
+                />
 
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:src="@drawable/senha"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:passwordToggleEnabled="true"
+            >
+            <EditText
+                android:id="@+id/txtConfirmSenha"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/txt_cadastro"
+                android:hint="   Confirmar Senha"
+                android:layout_marginRight="20dp"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="TIPO DE USUARIO:"
+                android:textColor="#0C0A0A"
+                android:textSize="17dp"/>
+
+            <RadioButton
+                android:id="@+id/UserCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLIENTE"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                />
+            <RadioButton
+                android:id="@+id/UserMercado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MERCADO"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                />
+
+
+
+        </RadioGroup>
 
 
     </LinearLayout>
 
+
+
     <Button
+        android:id="@+id/btnRegistro"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Cadastrar"

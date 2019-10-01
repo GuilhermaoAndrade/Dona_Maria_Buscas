@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367813715142",
+    "firebase_url": "https://donamariabuscas-1f8b5.firebaseio.com",
+    "project_id": "donamariabuscas-1f8b5",
+    "storage_bucket": "donamariabuscas-1f8b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367813715142:android:99d7de4d8f3207a9fda3c7",
+        "android_client_info": {
+          "package_name": "br.com.etecia.dona_maria_buscas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367813715142-a73q7tsnre54v5lhavi4rkufbo9935qj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.etecia.dona_maria_buscas",
+            "certificate_hash": "1006fef5a9dc1966c37390c9d76a8340f80dc05b"
+          }
+        },
+        {
+          "client_id": "367813715142-jo6lsbfraqmt68kcrm05arqf2ha0j2j4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7gG66nasSO7UI4aolFb4Xv1OROOM8Veo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367813715142-jo6lsbfraqmt68kcrm05arqf2ha0j2j4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
